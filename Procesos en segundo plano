@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+printf "Este script deshabilita los procesos en segundo plano de Adobe.\n"
+echo ""
+echo "Presione ENTER para continuar, de lo contrario cierra esta ventana."
+read ok
+echo "Por ingrese la contraseña de Administrador..."
+echo ""
+sudo killall ACCFinderSync "Core Sync" AdobeCRDaemon "Adobe Creative" AdobeIPCBroker node "Adobe Desktop Service" "Adobe Crash Reporter"
+sudo rm -rf "/Library/Application Support/Adobe/SLCache/" "/Library/Application Support/Adobe/SLStore/" "/Library/Caches/."* "/private/tmp/zx"* "~/Library/Preferences/Adobe/."*
+echo "Los servicios en segundo plano se han deshabilitado."
+echo "Puede cerrar esta ventana."
+echo "@andriuzha"
+exit 0
