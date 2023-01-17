@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+printf "Este script deshabilita el inicio de Creative Cloud.\n"
+printf "Creative Cloud no será desinstalado.\n"
+echo ""
+echo "Presione ENTER para continuar, de lo contrario cierra esta ventana."
+read ok
+echo "Por ingrese la contraseña de Administrador..."
+echo ""
+launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist  
+echo "Creative Cloud se ha deshabilitado con exito."
+echo "Reinicie el equipo."
+echo "@andriuzha"
+exit 0
